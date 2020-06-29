@@ -10,7 +10,7 @@ pages:
     - type: generic
       id: first_page
       name: Welcome
-      content: Welcome to MUSHRA Test! If possible open it in you PC/Laptops(in any case pls use earphone)       
+      content: Welcome to MUSHRA Test! If possible open it in you PC/Laptops       
     - type: mushra
       id: trial1
       name: MUSHRA
