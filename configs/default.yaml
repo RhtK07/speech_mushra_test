@@ -10,7 +10,7 @@ pages:
     - type: generic
       id: first_page
       name: Welcome
-      content: Welcome to MUSHRA Test! If possible open it in you PC/Laptops       
+      content: Welcome to MUSHRA Test! If possible open it in you PC/Laptops(and any case pls use earphone)       
     - type: mushra
       id: trial1
       name: MUSHRA
@@ -76,7 +76,7 @@ pages:
                 C3: configs/resources/audio/et/mono_c3.wav
     - type: finish
       name: Thank you
-      content: Thank you for attending! Pls take screenshot of the result that will come and send it to Rohit.K
+      content: Thank you for attending! Pls take screenshot of the result that will come and send it to Rohit.K(rohitk@iisc.ac.in/79872753936)
       showResults: true
       writeResults: true
       questionnaire:
