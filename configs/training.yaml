@@ -1,0 +1,145 @@
+testname: webMUSHRA 
+testId: Speech Enhacemenet
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: true
+remoteService: service/write.php
+
+
+pages:
+    - type: generic
+      id: first_page
+      name: Welcome
+      content: Welcome to webMUSHRA!       
+    - type: mushra
+      id: trial1
+      name: MUSHRA
+      content: This training shows how to use our user interface. Please perform the underlined instructions to proceed with the training session. Reminder: In a MUSHRA listening test you are asked to rate the Basic Audio Quality (BAQ) of each condition.<br/>Basic Audio Quality is a single and global attribute that is used to judge any and all detected differences between the reference and the condition.
+      showWaveform: true
+      enableLooping: true 
+      reference: configs/resources/audio/dt/mono_ref.wav
+      createAnchor35: true
+      createAnchor70: true
+      stimuli:
+          C1: configs/resources/audio/dt/mono_c1.wav
+          C2: configs/resources/audio/dt/mono_c2.wav
+          C3: configs/resources/audio/dt/mono_c3.wav
+    - 
+          - random
+          - type: mushra
+            id: Experiment_1_trail_dt
+            name: MUSHRA - Random 2
+            content: Due to randomization, this page will be either the second MUSHRA page or the third MUSHRA page.
+            enableLooping: true 
+            reference: configs/resources/audio/dt/mono_ref.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                C1: configs/resources/audio/dt/mono_c1.wav
+                C2: configs/resources/audio/dt/mono_c2.wav
+                C3: configs/resources/audio/dt/mono_c3.wav          
+          - type: mushra
+            id: Experiment_1_trail_dt
+            name: MUSHRA - Random 1
+            content: Due to randomization, this page will be either the second MUSHRA page or the third MUSHRA page.
+            enableLooping: true 
+            reference: configs/resources/audio/dt/mono_ref.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                C1: configs/resources/audio/dt/mono_c1.wav
+                C2: configs/resources/audio/dt/mono_c2.wav
+                C3: configs/resources/audio/dt/mono_c3.wav
+            type: mushra
+            id: Experiment_2_trail_et
+            name: MUSHRA - Random 2
+            content: Due to randomization, this page will be either the second MUSHRA page or the third MUSHRA page.
+            enableLooping: true
+            reference: configs/resources/audio/et/mono_ref.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                C1: configs/resources/audio/et/mono_c1.wav
+                C2: configs/resources/audio/et/mono_c2.wav
+                C3: configs/resources/audio/et/mono_c3.wav
+            type: mushra
+            id: Experiment_2_trail_et
+            name: MUSHRA - Random 2
+            content: Due to randomization, this page will be either the second MUSHRA page or the third MUSHRA page.
+            enableLooping: true
+            reference: configs/resources/audio/et/mono_ref.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                C1: configs/resources/audio/et/mono_c1.wav
+                C2: configs/resources/audio/et/mono_c2.wav
+                C3: configs/resources/audio/et/mono_c3.wav
+            type: mushra
+            id: Experiment_3_trail_dt_real
+            name: MUSHRA - Random 2
+            content: Due to randomization, this page will be either the second MUSHRA page or the third MUSHRA page.
+            enableLooping: true
+            reference: configs/resources/audio/dt_real/mono_ref.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                C1: configs/resources/audio/dt_real/mono_c1.wav
+                C2: configs/resources/audio/dt_real/mono_c2.wav
+            type: mushra
+            id: Experiment_3_trail_dt_real
+            name: MUSHRA - Random 2
+            content: Due to randomization, this page will be either the second MUSHRA page or the third MUSHRA page.
+            enableLooping: true
+            reference: configs/resources/audio/dt_real/mono_ref.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                C1: configs/resources/audio/dt_real/mono_c1.wav
+                C2: configs/resources/audio/dt_real/mono_c2.wav
+            type: mushra
+            id: Experiment_4_trail_4t_real
+            name: MUSHRA - Random 2
+            content: Due to randomization, this page will be either the second MUSHRA page or the third MUSHRA page.
+            enableLooping: true
+            reference: configs/resources/audio/mono_ref.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                C1: configs/resources/audio/et_real/mono_c1.wav
+                C2: configs/resources/audio/et_real/mono_c2.wav
+            type: mushra
+            id: Experiment_4_trail_et_real
+            name: MUSHRA - Random 2
+            content: Due to randomization, this page will be either the second MUSHRA page or the third MUSHRA page.
+            enableLooping: true
+            reference: configs/resources/audio/mono_ref.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                C1: configs/resources/audio/et_real/mono_c1.wav
+                C2: configs/resources/audio/et_real/mono_c2.wav
+    - type: finish
+      name: Thank you
+      content: Thank you for attending!
+      showResults: true
+      writeResults: true
+      questionnaire:
+          - type: text
+            label: eMail
+            name: email
+          - type: number
+            label: Age
+            name: age
+            min: 0
+            max: 100
+            default: 30
+          - type: likert
+            name: gender
+            label: Gender
+            response:
+             - value: female
+               label: Female
+             - value: male
+               label: Male
+             - value: other
+               label: Other
