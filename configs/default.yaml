@@ -28,7 +28,7 @@ pages:
           - random
           - type: mushra
             id: Experiment_1_trail_dt
-            name: MUSHRA - Random 2
+            name: MUSHRA - Random 1
             content: Due to randomization, this page will be either the second MUSHRA page or the third MUSHRA page.
             enableLooping: true 
             reference: configs/resources/audio/dt/mono_ref.wav
@@ -40,7 +40,7 @@ pages:
                 C3: configs/resources/audio/dt/mono_c3.wav          
           - type: mushra
             id: Experiment_1_trail_dt
-            name: MUSHRA - Random 1
+            name: MUSHRA - Random 2
             content: Due to randomization, this page will be either the second MUSHRA page or the third MUSHRA page.
             enableLooping: true 
             reference: configs/resources/audio/dt/mono_ref.wav
